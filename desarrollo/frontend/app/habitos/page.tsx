@@ -62,7 +62,7 @@ export default function HabitosPage() {
         gradient="from-mint via-mint to-sage"
         right={
           <img
-            src="/habits-mind.png"
+            src="/pngs/cuidado_personal2.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-2 -mr-1 -mt-2 w-32 max-w-[42%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-36"

@@ -50,7 +50,7 @@ export default function DescargaPage() {
         gradient="from-lila via-violet to-rose"
         right={
           <img
-            src="/mind-dump.png"
+            src="/pngs/descarga_mental.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-8 -mr-1 w-28 max-w-[40%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-32"

@@ -67,7 +67,7 @@ export default function PlaneadorPage() {
         gradient="from-violet via-violet to-lila"
         right={
           <img
-            src="/planner-plan.png"
+            src="/pngs/planeacion.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-2 -mr-1 -mt-2 w-36 max-w-[46%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-40"

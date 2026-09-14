@@ -85,7 +85,7 @@ export default function CicloPage() {
         gradient="from-rose via-lila to-violet"
         right={
           <img
-            src="/cycle-girl.png"
+            src="/pngs/menstruacion.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-2 -mr-1 -mt-2 w-28 max-w-[38%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-32"

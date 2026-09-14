@@ -64,7 +64,7 @@ export default function AcademicoPage() {
         gradient="from-navy via-violet to-navy"
         right={
           <img
-            src="/academic-research.png"
+            src="/pngs/investigacion1.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-2 -mr-1 -mt-2 w-44 max-w-[50%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-48"

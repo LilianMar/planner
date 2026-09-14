@@ -40,7 +40,7 @@ export default function MasPage() {
         gradient="from-navy via-violet to-lila"
         right={
           <img
-            src="/more-prune.png"
+            src="/pngs/podar.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-2 -mr-1 -mt-2 w-36 max-w-[46%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-40"

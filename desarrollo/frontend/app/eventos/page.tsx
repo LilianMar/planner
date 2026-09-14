@@ -44,7 +44,7 @@ export default function EventosPage() {
         gradient="from-coral via-rose to-lila"
         right={
           <img
-            src="/events-mgmt.png"
+            src="/pngs/eventos1.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-2 -mr-1 -mt-2 w-44 max-w-[50%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-48"

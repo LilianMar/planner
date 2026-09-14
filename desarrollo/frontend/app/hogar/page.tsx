@@ -56,7 +56,7 @@ export default function HogarPage() {
         gradient="from-mint via-sage to-mint"
         right={
           <img
-            src="/home-manage.png"
+            src="/pngs/gestion_hogar2.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-2 -mr-1 -mt-2 w-36 max-w-[46%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-40"

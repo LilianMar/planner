@@ -49,7 +49,7 @@ export default function MiDiaPage() {
         gradient="from-lila via-violet to-rose"
         right={
           <img
-            src="/hero-girl.png"
+            src="/pngs/paz.png"
             alt=""
             aria-hidden
             className="pointer-events-none -mb-8 -mr-1 w-28 max-w-[36%] shrink-0 select-none self-end object-contain drop-shadow-md sm:w-32"
