@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-playfair), 'Georgia', serif;
+  --font-sans: var(--font-jakarta), 'Plus Jakarta Sans Fallback', sans-serif;
+  --font-mono: var(--font-dm-mono), 'DM Mono Fallback', monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* THEMIS brand accents */
+  --color-violet: var(--violet);
+  --color-mint: var(--mint);
+  --color-rose: var(--rose);
+  --color-sun: var(--sun);
+  --color-coral: var(--coral);
+  --color-sage: var(--sage);
+  --color-lila: var(--lila);
+  --color-navy: var(--navy);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.4);
+}
+
+:root {
+  color-scheme: light;
+  --radius: 1rem;
+
+  --background: oklch(0.939 0.022 325.8);   /* lavender #F3E6F3 */
+  --foreground: oklch(0.30 0.06 298);       /* deep violet ink */
+
+  --card: oklch(0.985 0.008 326);           /* near white lavender */
+  --card-foreground: oklch(0.30 0.06 298);
+
+  --popover: oklch(0.985 0.008 326);
+  --popover-foreground: oklch(0.30 0.06 298);
+
+  --primary: oklch(0.445 0.178 298.1);      /* violet #6331A7 */
+  --primary-foreground: oklch(0.985 0.005 326);
+
+  --secondary: oklch(0.958 0 89.9);         /* light gray #F1F1F1 */
+  --secondary-foreground: oklch(0.35 0.05 298);
+
+  --muted: oklch(0.93 0.012 326);
+  --muted-foreground: oklch(0.50 0.04 300);
+
+  --accent: oklch(0.90 0.05 340);           /* rose tint */
+  --accent-foreground: oklch(0.35 0.08 351);
+
+  --destructive: oklch(0.62 0.2 25);
+
+  --border: oklch(0.88 0.02 326);
+  --input: oklch(0.91 0.018 326);
+  --ring: oklch(0.445 0.178 298.1);
+
+  /* Brand accents */
+  --violet: oklch(0.445 0.178 298.1);       /* #6331A7 */
+  --mint: oklch(0.539 0.088 209.3);         /* teal #157C8A */
+  --rose: oklch(0.581 0.171 351.0);         /* magenta #C14687 */
+  --sun: oklch(0.714 0.147 43.4);           /* orange #ED8152 */
+  --coral: oklch(0.714 0.147 43.4);         /* orange #ED8152 */
+  --sage: oklch(0.64 0.082 205);            /* soft teal */
+  --lila: oklch(0.80 0.06 320);             /* soft lavender */
+  --navy: oklch(0.38 0.12 298);             /* deep violet */
+
+  --chart-1: oklch(0.445 0.178 298.1);      /* violet */
+  --chart-2: oklch(0.539 0.088 209.3);      /* teal */
+  --chart-3: oklch(0.714 0.147 43.4);       /* orange */
+  --chart-4: oklch(0.581 0.171 351.0);      /* magenta */
+  --chart-5: oklch(0.64 0.082 205);         /* soft teal */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Dashboard web: el contenido se organiza en una rejilla de tarjetas para
+   aprovechar el ancho. Sólo en escritorio (lg+); móvil/tablet = una columna. */
+@media (min-width: 1024px) {
+  .web-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1.25rem;
+  }
+  /* Las tarjetas ocupan toda la celda (se anulan los márgenes de apilado). */
+  .web-grid > * {
+    margin: 0;
+    min-width: 0;
+  }
+  /* El header (banner) ocupa todo el ancho, sobre la rejilla. */
+  .web-grid > header,
+  .web-grid > .col-full {
+    grid-column: 1 / -1;
+  }
+}
+@media (min-width: 1536px) {
+  .web-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
